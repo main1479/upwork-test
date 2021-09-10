@@ -1,0 +1,60 @@
+.card {
+	border: 2px solid $color-primary;
+	border-radius: 1.5rem;
+}
+
+.reference__card {
+	@include flex-center;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	min-height: 23.6rem;
+
+	&-bg {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: -1;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			filter: brightness(60%);
+		}
+	}
+
+	&-img {
+		@include flex-center;
+		width: 14rem;
+		height: 14rem;
+		border-radius: 50%;
+		background: rgba($color-white, 0.9);
+		padding: 2rem;
+		transition: all 0.4s ease-in-out;
+	}
+
+	&-hover {
+		@include flex-center;
+		flex-direction: column;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba($color-white, 0.8);
+		transition: all 0.4s ease-in-out;
+		transform: translateY(102%);
+		.heading {
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	&:hover {
+		.reference__card-img {
+			transform: translateY(-300px);
+		}
+		.reference__card-hover {
+			transform: translateY(0);
+		}
+	}
+}

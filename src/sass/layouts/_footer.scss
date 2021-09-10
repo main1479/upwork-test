@@ -1,0 +1,87 @@
+.footer {
+	color: $color-white;
+	background: $color-text;
+	.container {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
+
+	.logo {
+		font-size: clamp(18px, 4vw, 2rem);
+		color: $color-white;
+		font-family: $font-logo;
+		margin-right: 2rem;
+	}
+
+	.social__links {
+		&-link {
+			background: $color-gray;
+			color: $color-text;
+			&:hover {
+				background: $color-secondary;
+			}
+		}
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		&-link {
+			margin-bottom: 0.5rem;
+			font-size: clamp(14px, 4vw, 1.7rem);
+			font-weight: 600;
+			color: $color-white;
+
+			&:hover {
+				color: $color-primary;
+			}
+		}
+	}
+
+	&__info {
+		margin-bottom: 2rem;
+		display: flex;
+		align-items: flex-start;
+
+		svg {
+			width: 2rem;
+			height: 2rem;
+			fill: $color-white;
+			margin-right: 2rem;
+			margin-top: 6px;
+		}
+
+		p.p__text {
+			color: $color-gray;
+			span {
+				color: $color-white;
+			}
+		}
+	}
+	.copyright {
+		@include flex-center;
+		padding: 2.5rem 0;
+		background: $color-white;
+		color: $color-text;
+
+		p.p__text {
+			padding: 0 2.5rem;
+			line-height: 1;
+			&:nth-child(1) {
+				border-right: 2px solid currentColor;
+			}
+		}
+
+		@media only screen and (max-width: $tab-port) {
+			flex-direction: column;
+
+			p.p__text {
+				padding: 0;
+				&:nth-child(1) {
+					border-right: none;
+					margin-bottom: 1rem;
+				}
+			}
+		}
+	}
+}

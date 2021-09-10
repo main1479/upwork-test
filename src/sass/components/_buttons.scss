@@ -1,0 +1,32 @@
+.btn {
+	font-size: 1.6rem;
+	font-weight: bold;
+	font-family: $font-primary;
+	text-transform: uppercase;
+
+	&__primary {
+		font-size: clamp(18px, 4vw, 2.5rem);
+		padding: 0.8rem 5rem;
+		border: 2px solid $color-primary;
+		border-radius: 0.8rem;
+		color: $color-primary;
+
+		&:hover {
+			background: $color-primary;
+			color: $color-white;
+		}
+	}
+
+	&__white {
+		background: $color-white;
+		padding: 0.6rem 4rem;
+		border-radius: 1rem;
+		text-transform: uppercase;
+		color: $color-primary;
+
+		&:hover {
+			background: $color-secondary;
+			color: $color-white;
+		}
+	}
+}

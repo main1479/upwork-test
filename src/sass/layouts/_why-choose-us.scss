@@ -1,0 +1,96 @@
+.why-choose-us {
+	padding: 6rem 0;
+	background: $color-bg-light;
+
+	.container {
+		max-width: 108rem;
+	}
+	.row {
+		position: relative;
+	}
+
+	.timeline__img {
+		height: 100%;
+		img {
+			height: 100%;
+			object-fit: cover;
+			margin-left: -3rem;
+		}
+
+		&--tablet {
+			width: 100%;
+		}
+
+		&--mobile {
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 10%;
+			min-width: 50px;
+		}
+	}
+
+	.timeline {
+		&__card {
+			display: flex;
+			align-items: flex-start;
+			margin-bottom: 8rem;
+
+			&-img {
+				flex: 0 0 4rem;
+				margin-top: 1rem;
+			}
+			&-text {
+				padding: 0 2rem;
+			}
+
+			// customize induvisual card
+
+			&--4 {
+				margin-top: 8rem;
+				// margin-bottom: 5rem;
+			}
+			&--5 {
+				// margin-bottom: 5rem;
+			}
+
+			&--6 {
+				margin-bottom: 0;
+			}
+		}
+
+		@media only screen and (max-width: $tab-land) {
+			display: flex;
+			align-items: flex-start;
+
+			&__card {
+				flex-wrap: wrap;
+				margin: 0 20px;
+
+				&-img {
+					flex: 0 0 100%;
+					margin-bottom: 1rem;
+				}
+				&-text {
+					margin: 0;
+					padding: 0;
+					flex: 0 0 100%;
+				}
+
+				&--4 {
+					margin-top: 0;
+				}
+			}
+		}
+
+		@media only screen and (max-width: $tab-port) {
+			display: block;
+			padding-left: 10%;
+
+			&__card {
+				margin-top: 4rem;
+			}
+		}
+	}
+}

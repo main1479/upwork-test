@@ -1,0 +1,21 @@
+{
+	"name": "porject",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"bootstrap": "sass node_modules/bootstrap/scss/bootstrap.scss src/css/bootstrap.css",
+		"css": "sass src/sass/main.scss src/css/style.css -w",
+		"start": "npm-run-all bootstrap css"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"bootstrap": "^5.1.1",
+		"sass": "^1.39.0"
+	},
+	"devDependencies": {
+		"concat": "^1.0.3",
+		"npm-run-all": "^4.1.5"
+	}
+}

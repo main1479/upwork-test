@@ -1,0 +1,34 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	outline: none;
+}
+::selection {
+	background: $color-text;
+	color: $color-white;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: $font-secondary;
+	line-height: 1.6;
+	font-size: 1.6rem;
+	color: $color-text;
+	a {
+		text-decoration: none;
+	}
+}
+
+.container {
+	width: 95%;
+	max-width: 120rem;
+	margin: 0 auto;
+}
